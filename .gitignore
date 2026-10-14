@@ -1,0 +1,23 @@
+# Dependencias
+/node_modules
+/.pnp
+.pnp.js
+
+# Next.js (Builds y caché)
+/.next/
+/out/
+
+# Entorno y credenciales (¡Importante para no filtrar claves!)
+.env
+.env*.local
+
+# Producción / Logs
+/build
+/dist
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editores y Sistema Operativo
+.DS_Store
+.vscode/
