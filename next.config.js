@@ -1,1 +1,1 @@
-module.exports={experimental:{serverComponentsExternalPackages:['pg','mysql2','nodemailer']},poweredByHeader:false};
+module.exports={experimental:{serverComponentsExternalPackages:['pg','mysql2']},poweredByHeader:false};

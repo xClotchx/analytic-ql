@@ -4,7 +4,7 @@ Next.js 14 App Router. Backend = API Routes (`app/api/*` + `lib/*`), Frontend = 
 ## Despliegue (todo gratis, sin tarjeta)
 1. **Google OAuth**: console.cloud.google.com → APIs y servicios → Credenciales → ID de cliente OAuth (Web). URI de redirección: `https://TU-APP.vercel.app/api/auth/callback/google` (y `http://localhost:3000/api/auth/callback/google` para local).
 2. **Gemini**: aistudio.google.com → Get API key → `GEMINI_API_KEY`. (Si el modelo cambia, ajusta `GEMINI_MODEL`.)
-3. **Brevo (SMTP, 300 correos/día)**: app.brevo.com → SMTP & API → SMTP → copia usuario y clave. Verifica un remitente en Senders y úsalo en `MAIL_FROM`.
+3. **Resend (correo, 100/día y 3.000/mes gratis)**: resend.com → API Keys → crea una clave → `RESEND_API_KEY`. Sin dominio verificado solo puedes enviar desde `onboarding@resend.dev` y **únicamente al correo con el que creaste tu cuenta de Resend**. Para enviar a cualquier usuario: Domains → Add Domain, añade los registros DNS y usa un remitente de ese dominio en `MAIL_FROM`.
 4. **Secretos**: `openssl rand -base64 32` dos veces → `NEXTAUTH_SECRET` y `ENCRYPTION_KEY`.
 5. Sube esta carpeta a un repo de GitHub → vercel.com/new → importa el repo → pega las variables de `.env.example` → Deploy. (O: `npx vercel --prod`.) Actualiza `NEXTAUTH_URL` con tu URL final y redeploya.
 6. Local: `cp .env.example .env.local && npm i && npm run dev`.
